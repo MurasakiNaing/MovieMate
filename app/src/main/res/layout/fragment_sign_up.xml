@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.signin.SignUpFragment">
+
+
+    <ImageView
+        android:id="@+id/image_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/sign_up"
+        android:contentDescription="@string/sign_up_image" />
+
+    <TextView
+        android:id="@+id/tv_intro_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_sign_up"
+        android:fontFamily="@font/my_font"
+        android:text="@string/sign_up"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        app:layout_constraintTop_toBottomOf="@id/tv_intro_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:layout_constraintTop_toBottomOf="@id/emailField"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/pw_strength_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/password_field"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirm_password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        app:layout_constraintTop_toBottomOf="@id/password_field"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_pw_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:fontFamily="@font/my_font"
+        app:layout_constraintTop_toBottomOf="@id/confirm_password_field"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/tv_already_have_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/already_have_an_account_login_now"
+        android:fontFamily="@font/my_font"
+        app:layout_constraintTop_toBottomOf="@id/button_sign_up"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/primary"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

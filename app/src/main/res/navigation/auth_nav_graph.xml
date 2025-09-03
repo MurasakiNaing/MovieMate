@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/loginInFragment">
+
+    <fragment
+        android:id="@+id/loginInFragment"
+        android:name="com.example.moviemate.auth.login.LoginInFragment"
+        android:label="fragment_login_in"
+        tools:layout="@layout/fragment_login_in">
+        <action
+            android:id="@+id/action_loginInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.moviemate.auth.signin.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+</navigation>
